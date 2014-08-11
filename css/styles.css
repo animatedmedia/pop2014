@@ -10,6 +10,7 @@
 body {
   color: #444444;
   font-family: 'Droid Sans', sans-serif;
+  background-image: url('../images/sneaker_mesh_fabric.png'); 
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 h2 {
   font-family: 'Marck Script', cursive;
   font-size: 64px;
-  padding: 20px;
+  padding: 20px auto;
   color: #f16564;
   text-align: center;
 }
@@ -46,9 +47,8 @@ p {
 }
 
 .page-wrapper{
-  /*max-width: 1280px;*/
+  max-width: 1280px;
   margin: 0 auto;
-  background-image: url('../images/sneaker_mesh_fabric.png'); 
 }
 
 .box {
@@ -81,8 +81,8 @@ p {
 */
 
 .header {
-  padding-top: 100px;
-  padding-bottom: 25px;
+  padding-top: 80px;
+  padding-bottom: 40px;
   text-align: center;
   overflow: hidden;
   background-attachment: fixed;
@@ -90,6 +90,7 @@ p {
 
 .header h1 {
   letter-spacing: 5px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -122,10 +123,9 @@ p {
   margin-bottom: 0;
 }
 
-img.logo {
-  border: 10px;
+.header-logo {
   border-radius: 2%;
-  padding: 10px;
+  padding: 20px;
   margin: 0 auto;
   display: block;
 }
@@ -137,8 +137,8 @@ img.logo {
 */
 
 .about {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .about p {
@@ -149,6 +149,8 @@ img.logo {
 
 .about h3 {
   text-align: center;
+  color: #00aba5;
+  font-weight: bold;
 }
 
 .about img {
@@ -180,20 +182,28 @@ img.logo {
   text-align: left;
   margin-left: 40px;
   margin-right: 40px;
-
 }
 
 .honoree h3 {
   text-align: center;
   margin-left: 40px;
   margin-right: 40px;
+  padding: 0;
 }
 
 .honoree h4 {
   font-size: 48px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: none;
+  color: black;
+}
 
+.honoree h4 a {
+  color: #00aba5;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .honoree p{
@@ -203,26 +213,27 @@ img.logo {
 }
 
 .honoree-left {
-  display: inline-block;  
-  float: left;
-  background-color: grey;
-  margin: 20px;
-  max-width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 46%;
 }
 
 .honoree-right {
   display: inline-block;
-  float: right;
-  background-color: lightgrey;
-  margin: 20px;
-  max-width: 50%;
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 46%;
+  min-height: 300px;
 }
 
 .honoree-img {
  border-radius: 50%;
- margin-left: 40px;
- margin-right: 40px;
-}
+ float: right;
+ margin-right: 20px;
+ }
 
  
 /*
@@ -276,6 +287,11 @@ img.logo {
   text-align: center;
 }
 
+.photos a {
+  color: #00aba5;
+  font-weight: bold;
+}
+
 /*
 --------------------------
 :: Committee Section
@@ -284,6 +300,7 @@ img.logo {
 
 .committee {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
   background-color: #FFB7B6;
   margin-left: 40px;
@@ -310,22 +327,80 @@ img.logo {
 .committee h4 {
   margin-left: 40px;
   margin-right: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.committee .2-columns {
-  column-count: 2;
-  column-gap: 40px;
-  column-rule: 1px solid lightgrey; 
+.committee-left {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding-top: 0 auto; 
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 42%;
+}
 
-/* Chrome, Safari, iPhone, etc */
--webkit-column-count: 2;
--webkit-column-gap: 40px;
--webkit-column-rule: 1px solid lightgrey;
+.committee-left p {
+  font-size: 20px;
+}
 
-/* Firefox */
--moz-column-count: 2;
--moz-column-gap: 40px;
--moz-column-rule: 1px solid lightgrey;
+.committee-right {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 42%;
+}
+
+.committee-right p {
+  font-size: 20px;
+}
+
+.donors-left {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 50%;
+}
+
+.donors-left li {
+  font-size: 20px;
+}
+
+.donors-right {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 42%;
+}
+
+.donors-right li {
+  font-size: 20px;
+}
+
+.dedication {
+  display: block;
+  vertical-align: middle;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.dedication h3 {
+  color: #00aba5;
 }
 
 /*
@@ -335,7 +410,6 @@ img.logo {
 */
 
 .footer {
-  margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   margin-left: 40px;
@@ -343,7 +417,15 @@ img.logo {
 }
 .footer ul li{
   display:inline-block;
+  color: #00aba5;
+  font-weight: bold;
 }
+
+.footer a{
+  color: #00aba5;
+  font-weight: bold;
+}
+
 
 .contact {
   text-align: center;
@@ -386,7 +468,7 @@ img.logo {
     color: #ffffff; /* Change the font color */
 }
 
-#animate .logo:hover {
+#animate .header-logo:hover {
   -webkit-animation: logo-animation 3s infinite;
   }
   @-webkit-keyframes logo-animation {
